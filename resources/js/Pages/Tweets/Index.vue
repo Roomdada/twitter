@@ -26,7 +26,7 @@ const props = defineProps({
                         <a class="text-sm text-gray-900 font-bold hover:text-blue-400" href="#">
                             {{ tweet.user.name }}
                         </a>
-                        <span class="font-thin text-gray-400">· le {{ tweet.created_at }}</span>
+                        <span class="font-thin text-gray-400">· Il y'a {{ tweet.created_at }}</span>
                     </div>
                     <div class="text-sm text-gray-400 font-thin">{{ tweet.content }}</div>
                     </div>

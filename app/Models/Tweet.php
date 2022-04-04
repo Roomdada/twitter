@@ -28,7 +28,7 @@ class Tweet extends Model
   protected function createdAt(): Attribute
   {
     return Attribute::make(
-      get: fn ($value) => \Carbon\Carbon::parse($value)->format('Y-m-d'),
+      get: fn ($value) => \Carbon\Carbon::parse($value)->diffForHumans(),
     );
   }
 }
