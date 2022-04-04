@@ -32,6 +32,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Dashboard',['app_name' => config('app.name')]);
     })->name('dashboard');
+
+    Route::resource('tweets', \App\Http\Controllers\TweetController::class);
 });
